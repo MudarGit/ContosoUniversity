@@ -1,5 +1,4 @@
-﻿    @model IEnumerable<ContosoUniversity.Models.Student>
-
+﻿
     @model PagedList.IPagedList<ContosoUniversity.Models.Student> 
            @using PagedList.Mvc; <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{ ViewBag.Title = "Students";
@@ -7,7 +6,7 @@
 <h2>Students</h2>
 <p>
     @Html.ActionLink("Create New", "Create")
-</p> @using (Html.BeginForm("Index", "Student", FormMethod.Get))
+</p> @using (Html.BeginForm("Index", "Students", FormMethod.Get))
     {
     <p>
         Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
